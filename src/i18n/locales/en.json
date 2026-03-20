@@ -1,0 +1,196 @@
+{
+  "common": {
+    "contact": "Contact",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "callUs": "Call Us"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "visa": "Visas",
+    "destinations": "Destinations",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Your Gateway to",
+    "titleHighlight": "International",
+    "subtitle": "DB Travel Agency supports you in all your international mobility projects with expertise and transparency",
+    "cta": "Discover our services"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete support for your project",
+    "visa": {
+      "title": "Visa Assistance",
+      "description": "Complete end-to-end support for all your visa applications"
+    },
+    "german": {
+      "title": "German Courses",
+      "description": "Preparation for Goethe, TELC and TestDaF exams"
+    },
+    "french": {
+      "title": "TCF Preparation",
+      "description": "French courses adapted to pass the TCF"
+    },
+    "guidance": {
+      "title": "Travel Guidance",
+      "description": "Personalized support for your travels"
+    },
+    "accommodation": {
+      "title": "Accommodation",
+      "description": "Housing solutions abroad"
+    },
+    "tickets": {
+      "title": "Flight Tickets",
+      "description": "Best rates on international flights"
+    }
+  },
+  "visaTypes": {
+    "title": "Visa Types",
+    "subtitle": "We support you for all your projects",
+    "student": {
+      "title": "Student Visa",
+      "description": "Studies and training abroad",
+      "features": [
+        "Internationally recognized programs",
+        "Personalized academic support",
+        "Guaranteed student accommodation",
+        "Academic monitoring"
+      ],
+      "stats": [
+        "Success rate",
+        "Students placed"
+      ]
+    },
+    "tourist": {
+      "title": "Tourist Visa",
+      "description": "Individual or family travel",
+      "features": [
+        "Individual and family trips",
+        "Comprehensive travel insurance",
+        "Personalized itineraries",
+        "24/7 assistance"
+      ],
+      "stats": [
+        "Trips organized",
+        "Destinations"
+      ]
+    },
+    "medical": {
+      "title": "Medical Visa",
+      "description": "Medical care abroad",
+      "features": [
+        "Quality specialized care",
+        "Renowned partner hospitals",
+        "Medical accompaniment",
+        "Fast track care"
+      ],
+      "stats": [
+        "Medical support",
+        "Patients assisted"
+      ]
+    },
+    "work": {
+      "title": "Work Visa",
+      "description": "With existing official contract",
+      "features": [
+        "Verified official contracts",
+        "Trusted partner companies",
+        "Continuous professional follow-up",
+        "Easy integration"
+      ],
+      "stats": [
+        "Satisfaction",
+        "Professionals"
+      ]
+    }
+  },
+  "payment": {
+    "title": "Payment Options",
+    "subtitle": "Flexible solutions adapted to your budget",
+    "security": "100% Secure Payment • Notarized Transaction • Success Guarantee",
+    "blocked": {
+      "title": "Blocked Account",
+      "price": "4,000,000 FCFA",
+      "description": "Secure bank deposit with notarial protection",
+      "features": [
+        "Money protected until file completion",
+        "Progressive deposit possible",
+        "Transaction signed before notary"
+      ]
+    },
+    "partial": {
+      "title": "Partial Payment",
+      "price": "Less than 3,000,000 FCFA",
+      "description": "Deposit to start, balance at the end",
+      "features": [
+        "Deposit to begin procedure",
+        "Balance payment upon completion",
+        "Complete file management"
+      ]
+    },
+    "support": {
+      "title": "Support",
+      "price": "500,000 FCFA",
+      "description": "You handle payments, we support you",
+      "features": [
+        "Support in all procedures",
+        "Payment in installments",
+        "You remain in control of payments"
+      ]
+    }
+  },
+ 
+  "destinations": {
+    "title": "Our Destinations",
+    "subtitle": "Present worldwide",
+    "schengen": "Schengen Area",
+    "canada": "Canada",
+    "usa": "United States",
+    "turkey": "Turkey",
+    "china": "China",
+    "russia": "Russia",
+    "africa": "Africa",
+    "schengenDesc": "27 European countries, free movement",
+    "canadaDesc": "Exceptional professional opportunities",
+    "usaDesc": "American dream within reach",
+    "turkeyDesc": "Bridge between East and West",
+    "chinaDesc": "Global economic power",
+    "russiaDesc": "Rich and diverse culture",
+    "africaDesc": "Discover the cradle of humanity",
+    "visaAvailable": "Visa available",
+    "scrollHint": "Scroll to discover more destinations"
+  },
+  "partners": {
+    "title": "Our Airline Partners",
+    "subtitle": "Trusted airlines for your travels around the world",
+    "ethiopia": "Ethiopia",
+    "france": "France",
+    "belgium": "Belgium",
+    "turkey": "Turkey",
+    "kenya": "Kenya",
+    "rwanda": "Rwanda",
+    "egypt": "Egypt",
+    "usa": "United States",
+    "officialPartner": "Official Partner",
+    "auto": "Auto",
+    "badge": "+50 destinations served • International flights • Easy booking"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our offices are at your service",
+    "hours": "Opening Hours",
+    "weekdays": "Monday - Saturday: 8am - 6pm",
+    "sunday": "Sunday: By appointment only",
+    "offices": "Our Offices",
+    "yaounde": "Yaoundé - Nkoabang",
+    "douala": "Douala - Cité des Palmiers",
+    "bafoussam": "Bafoussam - Kamkop"
+  },
+  "footer": {
+    "rights": "© 2024 DB Travel Agency. All rights reserved.",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy"
+  }
+}

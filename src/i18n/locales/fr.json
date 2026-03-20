@@ -1,0 +1,196 @@
+{
+  "common": {
+    "contact": "Contact",
+    "learnMore": "En savoir plus",
+    "getStarted": "Commencer",
+    "callUs": "Appelez-nous"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "visa": "Visas",
+    "destinations": "Destinations",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Votre Passerelle vers",
+    "titleHighlight": "l'International",
+    "subtitle": "DB Travel Agency vous accompagne dans tous vos projets de mobilité internationale avec expertise et transparence",
+    "cta": "Découvrir nos services"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Un accompagnement complet pour votre projet",
+    "visa": {
+      "title": "Assistance Visa",
+      "description": "Suivi complet de A à Z pour tous vos dossiers de visa"
+    },
+    "german": {
+      "title": "Cours d'Allemand",
+      "description": "Préparation aux examens Goethe, TELC et TestDaF"
+    },
+    "french": {
+      "title": "Préparation TCF",
+      "description": "Cours de français adaptés pour réussir le TCF"
+    },
+    "guidance": {
+      "title": "Conseils Voyage",
+      "description": "Accompagnement personnalisé pour vos voyages"
+    },
+    "accommodation": {
+      "title": "Logement",
+      "description": "Solutions d'hébergement à l'étranger"
+    },
+    "tickets": {
+      "title": "Billets d'Avion",
+      "description": "Meilleurs tarifs sur les vols internationaux"
+    }
+  },
+  "visaTypes": {
+    "title": "Types de Visas",
+    "subtitle": "Nous vous accompagnons pour tous vos projets",
+    "student": {
+      "title": "Visa Étudiant",
+      "description": "Études et formations à l'étranger",
+      "features": [
+        "Formations reconnues internationalement",
+        "Accompagnement scolaire personnalisé",
+        "Logement étudiant garanti",
+        "Suivi académique"
+      ],
+      "stats": [
+        "Taux de réussite",
+        "Étudiants placés"
+      ]
+    },
+    "tourist": {
+      "title": "Visa Touristique",
+      "description": "Voyages individuels ou familiaux",
+      "features": [
+        "Voyages individuels et familiaux",
+        "Assurance voyage complète",
+        "Itinéraires personnalisés",
+        "Assistance 24/7"
+      ],
+      "stats": [
+        "Voyages organisés",
+        "Destinations"
+      ]
+    },
+    "medical": {
+      "title": "Visa Médical",
+      "description": "Soins médicaux à l'étranger",
+      "features": [
+        "Soins spécialisés de qualité",
+        "Hôpitaux partenaires renommés",
+        "Accompagnement médical",
+        "Prise en charge rapide"
+      ],
+      "stats": [
+        "Support médical",
+        "Patients assistés"
+      ]
+    },
+    "work": {
+      "title": "Visa de Travail",
+      "description": "Avec contrat officiel existant",
+      "features": [
+        "Contrats officiels vérifiés",
+        "Entreprises partenaires de confiance",
+        "Suivi professionnel continu",
+        "Intégration facilitée"
+      ],
+      "stats": [
+        "Satisfaction",
+        "Professionnels"
+      ]
+    }
+  },
+  "payment": {
+    "title": "Options de Paiement",
+    "subtitle": "Des solutions flexibles adaptées à votre budget",
+    "security": "Paiement 100% sécurisé • Transaction notariée • Garantie de réussite",
+    "blocked": {
+      "title": "Compte Bloqué",
+      "price": "4 000 000 FCFA",
+      "description": "Dépôt sécurisé en banque avec protection notariale",
+      "features": [
+        "Argent protégé jusqu'à la fin du dossier",
+        "Dépôt progressif possible",
+        "Transaction signée devant notaire"
+      ]
+    },
+    "partial": {
+      "title": "Paiement Partiel",
+      "price": "Moins de 3 000 000 FCFA",
+      "description": "Avance pour commencer, solde à la fin",
+      "features": [
+        "Avance pour débuter la procédure",
+        "Paiement du reste à la finalisation",
+        "Gestion complète du dossier"
+      ]
+    },
+    "support": {
+      "title": "Accompagnement",
+      "price": "500 000 FCFA",
+      "description": "Vous gérez les paiements, nous vous accompagnons",
+      "features": [
+        "Accompagnement dans toutes les démarches",
+        "Paiement en plusieurs fois",
+        "Vous restez maître des paiements"
+      ]
+    }
+  },
+  
+  "destinations": {
+    "title": "Nos Destinations",
+    "subtitle": "Présents dans le monde entier",
+    "schengen": "Zone Schengen",
+    "canada": "Canada",
+    "usa": "États-Unis",
+    "turkey": "Turquie",
+    "china": "Chine",
+    "russia": "Russie",
+    "africa": "Afrique",
+    "schengenDesc": "27 pays européens, libre circulation",
+    "canadaDesc": "Opportunités professionnelles exceptionnelles",
+    "usaDesc": "Rêve américain à portée de main",
+    "turkeyDesc": "Pont entre l'Orient et l'Occident",
+    "chinaDesc": "Puissance économique mondiale",
+    "russiaDesc": "Culture riche et diversifiée",
+    "africaDesc": "Découvrez le berceau de l'humanité",
+    "visaAvailable": "Visa disponible",
+    "scrollHint": "Faites défiler pour découvrir plus de destinations"
+  },
+  "partners": {
+    "title": "Nos Partenaires Aériens",
+    "subtitle": "Des compagnies de confiance pour vos voyages à travers le monde",
+    "ethiopia": "Éthiopie",
+    "france": "France",
+    "belgium": "Belgique",
+    "turkey": "Turquie",
+    "kenya": "Kenya",
+    "rwanda": "Rwanda",
+    "egypt": "Égypte",
+    "usa": "États-Unis",
+    "officialPartner": "Partenaire officiel",
+    "auto": "Auto",
+    "badge": "+ de 50 destinations desservies • Vols internationaux • Réservation facile"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nos agences sont à votre disposition",
+    "hours": "Horaires d'ouverture",
+    "weekdays": "Lundi - Samedi: 8h - 18h",
+    "sunday": "Dimanche: Uniquement sur RDV",
+    "offices": "Nos Agences",
+    "yaounde": "Yaoundé - Nkoabang",
+    "douala": "Douala - Cité des Palmiers",
+    "bafoussam": "Bafoussam - Kamkop"
+  },
+  "footer": {
+    "rights": "© 2024 DB Travel Agency. Tous droits réservés.",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité"
+  }
+}
