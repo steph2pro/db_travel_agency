@@ -3,20 +3,58 @@
     "contact": "Contact",
     "learnMore": "Learn More",
     "getStarted": "Get Started",
-    "callUs": "Call Us"
+    "callUs": "Call Us",
+    "backToHome": "Back to Home",
+    "sendMessage": "Send Message",
+    "chooseFormula": "Choose this plan",
+    "requestInfo": "Request more information",
+    "bookAppointment": "Book an appointment",
+    "viewMap": "View on Google Maps",
+    "selectSubject": "Select a subject",
+    "email": "Email"
   },
   "nav": {
     "home": "Home",
     "services": "Services",
     "visa": "Visas",
     "destinations": "Destinations",
+    "payment": "Payment",
     "contact": "Contact"
   },
   "hero": {
     "title": "Your Gateway to",
     "titleHighlight": "International",
     "subtitle": "DB Travel Agency supports you in all your international mobility projects with expertise and transparency",
-    "cta": "Discover our services"
+    "cta": "Discover our services",
+    "servicesHighlight": "for your Success",
+    "servicesDescription": "Complete visa assistance, German and English courses, TCF preparation, travel advice, accommodation and flight tickets. A 360° support for your international project.",
+    "destinationsHighlight": "International",
+    "destinationsDescription": "Visa possible in all countries of {{schengen}}, {{canada}}, {{usa}}, {{turkey}}, {{china}}, {{russia}}, and {{africa}}. Your travel dream becomes reality.",
+    "exploreDestinations": "Explore destinations",
+    "paymentHighlight": "Adapted to Your Budget",
+    "paymentDescription": "{{blockedTitle}}: {{blockedPrice}} • {{partialTitle}}: {{partialPrice}} • {{supportTitle}}: {{supportPrice}}. Transparent solutions adapted to all budgets.",
+    "viewOptions": "View options",
+    "visaHighlight": "For All Your Projects",
+    "visaDescription": "{{student}}, {{tourist}}, {{medical}} and {{work}}. We support you from A to Z in all your administrative procedures to guarantee your success.",
+    "discoverVisas": "Discover visas",
+    "stats": {
+      "clients": "Satisfied clients",
+      "destinations": "Destinations",
+      "successRate": "Success rate",
+      "keyServices": "Key services",
+      "support": "Support",
+      "personalized": "Personalized",
+      "accessibleCountries": "Accessible countries",
+      "continents": "Continents",
+      "coverage": "Coverage",
+      "plans": "Plans",
+      "noAdvance": "No advance",
+      "secure": "Secure",
+      "visaTypes": "Visa types",
+      "fullSupport": "Full support",
+      "fast": "Fast",
+      "processing": "Processing"
+    }
   },
   "services": {
     "title": "Our Services",
@@ -44,7 +82,128 @@
     "tickets": {
       "title": "Flight Tickets",
       "description": "Best rates on international flights"
+    },
+     "footer": {
+      "reliable": "100% reliable service • Personalized support • Satisfaction guaranteed",
+      "support247": "24/7 Support"
+    },
+    "details": {
+      "visa": {
+    "badges": {
+      "fastProcessing": "Fast processing",
+      "secure": "100% secure",
+      "highSuccessRate": "High success rate"
+    },
+        "features": [
+          "Personalized end-to-end support",
+          "Document verification",
+          "Interview preparation",
+          "Post-submission follow-up",
+          "98% success rate"
+        ]
+      },
+      "german": {
+        "features": [
+          "Intensive courses A1 to C1",
+          "Goethe and TELC preparation",
+          "Small group classes",
+          "Mock exams",
+          "Official certificate"
+        ]
+      },
+      "french": {
+        "features": [
+          "Intensive French courses",
+          "TCF Canada preparation",
+          "Practical exercises",
+          "Personalized follow-up",
+          "Exam simulations"
+        ]
+      },
+      "guidance": {
+        "features": [
+          "Pre-departure advice",
+          "Airport assistance",
+          "On-site support",
+          "Post-arrival follow-up",
+          "Integration guide"
+        ]
+      },
+      "accommodation": {
+        "features": [
+          "Verified accommodations",
+          "Secure shared housing",
+          "Student residences",
+          "Installation assistance",
+          "Quality guarantee"
+        ]
+      },
+      "tickets": {
+        "features": [
+          "Best rates guaranteed",
+          "Flexible booking",
+          "Travel insurance included",
+          "24/7 support",
+          "Free changes"
+        ]
+      }
+    },
+     "courses": {
+    "title": "Language Courses",
+    "description": "Master new languages with our comprehensive courses taught by native-speaking instructors. Learn at your own pace with flexible scheduling.",
+    "levels": "Levels",
+    "features": "Features",
+    "duration": "Duration",
+    "startLearning": "Start Learning Today",
+    "english": {
+      "name": "English",
+      "levels": ["A1 - Beginner", "A2 - Elementary", "B1 - Intermediate", "B2 - Upper Intermediate", "C1 - Advanced", "C2 - Proficient"],
+      "duration": "4-12 weeks per level",
+      "features": ["IELTS/TOEFL Preparation", "Business English", "Conversation Practice", "Grammar & Writing"]
+    },
+    "spanish": {
+      "name": "Spanish",
+      "levels": ["A1 - Beginner", "A2 - Elementary", "B1 - Intermediate", "B2 - Upper Intermediate", "C1 - Advanced", "C2 - Proficient"],
+      "duration": "4-12 weeks per level",
+      "features": ["DELE Preparation", "Latin American Spanish", "Conversation Practice", "Business Spanish"]
+    },
+    "german": {
+      "name": "German",
+      "levels": ["A1 - Beginner", "A2 - Elementary", "B1 - Intermediate", "B2 - Upper Intermediate", "C1 - Advanced", "C2 - Proficient"],
+      "duration": "4-12 weeks per level",
+      "features": ["Goethe-Zertifikat Preparation", "TestDaF Preparation", "Business German", "Conversation Practice"]
+    },
+    "french": {
+      "name": "French",
+      "levels": ["A1 - Beginner", "A2 - Elementary", "B1 - Intermediate", "B2 - Upper Intermediate", "C1 - Advanced", "C2 - Proficient"],
+      "duration": "4-12 weeks per level",
+      "features": ["DELF/DALF Preparation", "TCF Preparation", "Business French", "Conversation Practice"]
+    },
+    "italian": {
+      "name": "Italian",
+      "levels": ["A1 - Beginner", "A2 - Elementary", "B1 - Intermediate", "B2 - Upper Intermediate", "C1 - Advanced", "C2 - Proficient"],
+      "duration": "4-12 weeks per level",
+      "features": ["CILS Preparation", "CELI Preparation", "Italian Culture", "Conversation Practice"]
+    },
+    "mandarin": {
+      "name": "Mandarin Chinese",
+      "levels": ["HSK 1", "HSK 2", "HSK 3", "HSK 4", "HSK 5", "HSK 6"],
+      "duration": "6-12 weeks per level",
+      "features": ["HSK Preparation", "Business Chinese", "Character Writing", "Conversation Practice"]
+    },
+    "portuguese": {
+      "name": "Portuguese",
+      "levels": ["A1 - Beginner", "A2 - Elementary", "B1 - Intermediate", "B2 - Upper Intermediate", "C1 - Advanced", "C2 - Proficient"],
+      "duration": "4-12 weeks per level",
+      "features": ["CELPE-Bras Preparation", "European Portuguese", "Business Portuguese", "Conversation Practice"]
+    },
+    "arabic": {
+      "name": "Arabic",
+      "levels": ["Modern Standard Arabic", "Gulf Arabic", "Levantine Arabic", "Egyptian Arabic", "Business Arabic", "Quranic Arabic"],
+      "duration": "6-12 weeks per level",
+      "features": ["MSA Course", "Dialect Focus", "Business Arabic", "Conversation Practice"]
     }
+  }
   },
   "visaTypes": {
     "title": "Visa Types",
@@ -56,12 +215,11 @@
         "Internationally recognized programs",
         "Personalized academic support",
         "Guaranteed student accommodation",
-        "Academic monitoring"
+        "Academic monitoring",
+        "Guidance to top universities"
       ],
-      "stats": [
-        "Success rate",
-        "Students placed"
-      ]
+      "stats": ["Success rate", "Students placed"],
+      "details": "Studying abroad is an achievable dream. Our team helps you find the ideal program and obtain your visa under the best conditions."
     },
     "tourist": {
       "title": "Tourist Visa",
@@ -70,12 +228,11 @@
         "Individual and family trips",
         "Comprehensive travel insurance",
         "Personalized itineraries",
-        "24/7 assistance"
+        "24/7 assistance",
+        "Hotel booking"
       ],
-      "stats": [
-        "Trips organized",
-        "Destinations"
-      ]
+      "stats": ["Trips organized", "Destinations"],
+      "details": "Discover the world with peace of mind. We handle all procedures for your tourist visa."
     },
     "medical": {
       "title": "Medical Visa",
@@ -84,12 +241,11 @@
         "Quality specialized care",
         "Renowned partner hospitals",
         "Medical accompaniment",
-        "Fast track care"
+        "Fast track care",
+        "Post-treatment follow-up"
       ],
-      "stats": [
-        "Medical support",
-        "Patients assisted"
-      ]
+      "stats": ["Medical support", "Patients assisted"],
+      "details": "Access the best medical care internationally. We facilitate all procedures for your medical visa."
     },
     "work": {
       "title": "Work Visa",
@@ -98,18 +254,24 @@
         "Verified official contracts",
         "Trusted partner companies",
         "Continuous professional follow-up",
-        "Easy integration"
+        "Easy integration",
+        "Career support"
       ],
-      "stats": [
-        "Satisfaction",
-        "Professionals"
-      ]
+      "stats": ["Satisfaction", "Professionals"],
+      "details": "Achieve your professional project abroad. We help you obtain your work visa quickly."
     }
   },
   "payment": {
     "title": "Payment Options",
     "subtitle": "Flexible solutions adapted to your budget",
     "security": "100% Secure Payment • Notarized Transaction • Success Guarantee",
+    "benefits": [
+      "Secure payment",
+      "Notarized transaction",
+      "No advance payment",
+      "Banking partner"
+    ],
+    "whyTitle": "Why are our payment options unique?",
     "blocked": {
       "title": "Blocked Account",
       "price": "4,000,000 FCFA",
@@ -141,7 +303,6 @@
       ]
     }
   },
- 
   "destinations": {
     "title": "Our Destinations",
     "subtitle": "Present worldwide",
@@ -160,7 +321,17 @@
     "russiaDesc": "Rich and diverse culture",
     "africaDesc": "Discover the cradle of humanity",
     "visaAvailable": "Visa available",
-    "scrollHint": "Scroll to discover more destinations"
+    "scrollHint": "Scroll to discover more destinations",
+    "badge": "+100 destinations available • Personalized assistance • Visa guaranteed",
+    "details": {
+      "schengen": "27 European countries, free movement, study and work opportunities.",
+      "canada": "Exceptional quality of life, renowned education system, professional opportunities.",
+      "usa": "Prestigious universities, dynamic economy, cultural diversity.",
+      "turkey": "Cultural crossroads, quality healthcare system, affordable cost of living.",
+      "china": "Economic power, ancient culture, business opportunities.",
+      "russia": "Rich cultural heritage, quality education, magnificent landscapes.",
+      "africa": "Natural diversity, authentic cultures, emerging opportunities."
+    }
   },
   "partners": {
     "title": "Our Airline Partners",
@@ -186,11 +357,56 @@
     "offices": "Our Offices",
     "yaounde": "Yaoundé - Nkoabang",
     "douala": "Douala - Cité des Palmiers",
-    "bafoussam": "Bafoussam - Kamkop"
+    "bafoussam": "Bafoussam - Kamkop",
+    "generalContact": "General Contact",
+    "generalDescription": "For any inquiries, please contact us via the following emails. We'll get back to you within 24 hours.",
+    "quickResponse": "We typically respond within 24 hours",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "subjects": {
+        "visa": "Visa application",
+        "courses": "Language courses",
+        "ticket": "Flight ticket",
+        "support": "Support",
+        "other": "Other"
+      },
+      "success": "Message sent! We will get back to you shortly."
+    },
+    "address": {
+      "yaounde": "Nkoabang (Carrière entrance)",
+      "douala": "Cité des Palmiers",
+      "bafoussam": "Kamkop (opposite Tradex station, Djoko pharmacy building)"
+    },
+    "emailTypes": {
+      "sales": "Sales & Partnerships",
+      "general": "General Inquiries",
+      "support": "Technical Support"
+    },
+    "emailDescriptions": {
+      "sales": "For business inquiries and partnerships",
+      "general": "General questions and information",
+      "support": "Technical support and assistance"
+    }
   },
   "footer": {
     "rights": "© 2024 DB Travel Agency. All rights reserved.",
     "legal": "Legal Notice",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "quickLinks": "Quick Links",
+    "trustedPartner": "Your trusted partner for international mobility."
+  },
+   "whatsapp": {
+    "defaultMessage": "Hello, I would like to get more information about your immigration services. Thank you!",
+    "chooseAgency": "Choose your agency",
+    "selectNearestAgency": "Select the agency closest to you",
+    "contactMainAgency": "Contact main agency",
+    "nearYou": "Near you",
+    "openingWhatsApp": "Opening WhatsApp..."
   }
 }

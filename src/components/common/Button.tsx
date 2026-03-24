@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -8,6 +9,8 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   href?: string;
+  to?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,6 +20,8 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   className = '',
   href,
+  to,
+  type = 'button',
 }) => {
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 cursor-pointer';
   
@@ -34,6 +39,14 @@ const Button: React.FC<ButtonProps> = ({
   
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
   
+  if (to) {
+    return (
+      <Link to={to} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+  
   if (href) {
     return (
       <a href={href} className={classes}>
@@ -48,6 +61,7 @@ const Button: React.FC<ButtonProps> = ({
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
       className={classes}
+      type={type}
     >
       {children}
     </motion.button>

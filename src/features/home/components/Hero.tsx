@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence,type Variants } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Button from '../../../components/common/Button';
 import Container from '../../../components/common/Container';
+import heroImage1 from '../../../assets/images/hero1.png';
+import heroImage2 from '../../../assets/images/hero2.png';
+import heroImage3 from '../../../assets/images/hero3.png';
+import heroImage4 from '../../../assets/images/hero4.png';
+import heroImage5 from '../../../assets/images/hero5.png';
 
 interface Slide {
   id: number;
@@ -19,6 +24,17 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Détecter la taille de l'écran
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const slides: Slide[] = [
     {
@@ -26,69 +42,89 @@ const Hero: React.FC = () => {
       title: t('hero.title'),
       highlight: t('hero.titleHighlight'),
       description: t('hero.subtitle'),
-      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3",
+      image: heroImage1,
       buttonText: t('hero.cta'),
-      buttonLink: "#services",
+      buttonLink: "/services",
       stats: [
-        { value: "500+", label: "Clients satisfaits" },
-        { value: "50+", label: "Destinations" },
-        { value: "98%", label: "Taux de réussite" }
+        { value: "500+", label: t('hero.stats.clients') },
+        { value: "50+", label: t('hero.stats.destinations') },
+        { value: "98%", label: t('hero.stats.successRate') }
       ]
     },
     {
       id: 2,
       title: t('services.title'),
-      highlight: "pour votre Réussite",
-      description: "Assistance visa complète, cours d'allemand et anglais, préparation TCF, conseils voyage, logement et billets d'avion. Un accompagnement 360° pour votre projet international.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3",
+      highlight: t('hero.servicesHighlight'),
+      description: t('hero.servicesDescription'),
+      image: heroImage2,
       buttonText: t('services.visa.title'),
-      buttonLink: "#services",
+      buttonLink: "/visa",
       stats: [
-        { value: "6", label: "Services clés" },
-        { value: "24/7", label: "Support" },
-        { value: "100%", label: "Personnalisé" }
+        { value: "6", label: t('hero.stats.keyServices') },
+        { value: "24/7", label: t('hero.stats.support') },
+        { value: "100%", label: t('hero.stats.personalized') }
       ]
     },
     {
       id: 3,
       title: t('destinations.title'),
-      highlight: "Internationales",
-      description: `Visa possible dans tous les pays de la ${t('destinations.schengen')}, ${t('destinations.canada')}, ${t('destinations.usa')}, ${t('destinations.turkey')}, ${t('destinations.china')}, ${t('destinations.russia')}, et ${t('destinations.africa')}. Votre rêve de voyage devient réalité.`,
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3",
-      buttonText: "Explorer les destinations",
-      buttonLink: "#destinations",
+      highlight: t('hero.destinationsHighlight'),
+      description: t('hero.destinationsDescription', {
+        schengen: t('destinations.schengen'),
+        canada: t('destinations.canada'),
+        usa: t('destinations.usa'),
+        turkey: t('destinations.turkey'),
+        china: t('destinations.china'),
+        russia: t('destinations.russia'),
+        africa: t('destinations.africa')
+      }),
+      image: heroImage3,
+      buttonText: t('hero.exploreDestinations'),
+      buttonLink: "/destinations",
       stats: [
-        { value: "30+", label: "Pays accessibles" },
-        { value: "4", label: "Continents" },
-        { value: "100%", label: "Couverture" }
+        { value: "30+", label: t('hero.stats.accessibleCountries') },
+        { value: "4", label: t('hero.stats.continents') },
+        { value: "100%", label: t('hero.stats.coverage') }
       ]
     },
     {
       id: 4,
       title: t('payment.title'),
-      highlight: "Adapté à Votre Budget",
-      description: `${t('payment.blocked.title')} : ${t('payment.blocked.price')} • ${t('payment.partial.title')} : ${t('payment.partial.price')} • ${t('payment.support.title')} : ${t('payment.support.price')}. Des solutions transparentes et adaptées à tous les budgets.`,
-      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3",
-      buttonText: "Voir les options",
-      buttonLink: "#visa",
+      highlight: t('hero.paymentHighlight'),
+      description: t('hero.paymentDescription', {
+        blockedTitle: t('payment.blocked.title'),
+        blockedPrice: t('payment.blocked.price'),
+        partialTitle: t('payment.partial.title'),
+        partialPrice: t('payment.partial.price'),
+        supportTitle: t('payment.support.title'),
+        supportPrice: t('payment.support.price')
+      }),
+      image: heroImage4,
+      buttonText: t('hero.viewOptions'),
+      buttonLink: "/visa",
       stats: [
-        { value: "3", label: "Formules" },
-        { value: "0", label: "Aucune avance" },
-        { value: "100%", label: "Sécurisé" }
+        { value: "3", label: t('hero.stats.plans') },
+        { value: "0", label: t('hero.stats.noAdvance') },
+        { value: "100%", label: t('hero.stats.secure') }
       ]
     },
     {
       id: 5,
       title: t('visaTypes.title'),
-      highlight: "Pour Tous Vos Projets",
-      description: `${t('visaTypes.student.title')}, ${t('visaTypes.tourist.title')}, ${t('visaTypes.medical.title')} et ${t('visaTypes.work.title')}. Nous vous accompagnons de A à Z dans toutes vos démarches administratives pour garantir votre réussite.`,
-      image: "https://images.unsplash.com/photo-1554224154-26032ffc0c07?ixlib=rb-4.0.3",
-      buttonText: "Découvrir les visas",
-      buttonLink: "#visa",
+      highlight: t('hero.visaHighlight'),
+      description: t('hero.visaDescription', {
+        student: t('visaTypes.student.title'),
+        tourist: t('visaTypes.tourist.title'),
+        medical: t('visaTypes.medical.title'),
+        work: t('visaTypes.work.title')
+      }),
+      image: heroImage5,
+      buttonText: t('hero.discoverVisas'),
+      buttonLink: "/visa",
       stats: [
-        { value: "4", label: "Types de visas" },
-        { value: "100%", label: "Suivi complet" },
-        { value: "Rapide", label: "Traitement" }
+        { value: "4", label: t('hero.stats.visaTypes') },
+        { value: "100%", label: t('hero.stats.fullSupport') },
+        { value: t('hero.stats.fast'), label: t('hero.stats.processing') }
       ]
     }
   ];
@@ -107,6 +143,27 @@ const Hero: React.FC = () => {
     setIsAutoPlaying(false);
     setCurrentSlide(index);
     setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  // Variantes d'animation
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
   };
 
   return (
@@ -145,101 +202,166 @@ const Hero: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="grid lg:grid-cols-2 gap-12 items-center"
+              className={`grid ${isMobile ? 'grid-cols-1 px-0' : 'lg:grid-cols-2'} gap-12 items-center`}
             >
-              {/* Texte */}
-              <div>
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
-                >
-                  {slides[currentSlide].title}{' '}
-                  {slides[currentSlide].highlight && (
-                    <span className="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                      {slides[currentSlide].highlight}
-                    </span>
-                  )}
-                </motion.h1>
-                
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className="text-xl text-gray-600 dark:text-gray-300 mb-8"
-                >
-                  {slides[currentSlide].description}
-                </motion.p>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="flex flex-wrap gap-4"
-                >
-                  <Button size="lg" href={slides[currentSlide].buttonLink}>
-                    {slides[currentSlide].buttonText}
-                  </Button>
-                  <Button size="lg" variant="outline" href="#contact">
-                    {t('common.contact')}
-                  </Button>
-                </motion.div>
+              {/* Version Desktop - Image à côté */}
+              {!isMobile && (
+                <>
+                  {/* Texte */}
+                  <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    <motion.h1
+                      variants={itemVariants}
+                      className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6"
+                    >
+                      {slides[currentSlide].title}{' '}
+                      {slides[currentSlide].highlight && (
+                        <span className="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                          {slides[currentSlide].highlight}
+                        </span>
+                      )}
+                    </motion.h1>
+                    
+                    <motion.p
+                      variants={itemVariants}
+                      className="text-base md:text-xl text-gray-600 dark:text-gray-300 mb-8"
+                    >
+                      {slides[currentSlide].description}
+                    </motion.p>
+                    
+                    <motion.div
+                      variants={itemVariants}
+                      className="flex flex-wrap gap-4"
+                    >
+                      <Button size="lg" href={slides[currentSlide].buttonLink}>
+                        {slides[currentSlide].buttonText}
+                      </Button>
+                      <Button size="lg" variant="outline" href="/contact">
+                        {t('common.contact')}
+                      </Button>
+                    </motion.div>
 
-                {/* Stats */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                  className="flex gap-8 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700"
-                >
-                  {slides[currentSlide].stats.map((stat, idx) => (
-                    <div key={idx}>
-                      <p className="text-3xl font-bold text-primary-500">{stat.value}</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</p>
+                    <motion.div
+                      variants={itemVariants}
+                      className="flex flex-wrap gap-6 md:gap-8 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700"
+                    >
+                      {slides[currentSlide].stats.map((stat, idx) => (
+                        <div key={idx}>
+                          <p className="text-2xl md:text-3xl font-bold text-primary-500">{stat.value}</p>
+                          <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">{stat.label}</p>
+                        </div>
+                      ))}
+                    </motion.div>
+                  </motion.div>
+                  
+                  {/* Image */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="relative"
+                  >
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                      <img
+                        src={slides[currentSlide].image}
+                        alt={slides[currentSlide].title}
+                        className="w-full h-auto"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     </div>
-                  ))}
-                </motion.div>
-              </div>
-              
-              {/* Image */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src={slides[currentSlide].image}
-                    alt={slides[currentSlide].title}
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                </div>
-                
-                {/* Floating Badge */}
+                    
+                    <motion.div
+                      animate={{ y: [-10, 10, -10] }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                      className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4"
+                    >
+                      <p className="text-2xl font-bold text-primary-500">
+                        {slides[currentSlide].stats[0].value}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                        {slides[currentSlide].stats[0].label}
+                      </p>
+                    </motion.div>
+                  </motion.div>
+                </>
+              )}
+
+              {/* Version Mobile - Carte avec image en fond */}
+              {isMobile && (
                 <motion.div
-                  animate={{ y: [-10, 10, -10] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="relative rounded-2xl overflow-hidden shadow-2xl mx-0"
                 >
-                  <p className="text-2xl font-bold text-primary-500">
-                    {slides[currentSlide].stats[0].value}
-                  </p>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
-                    {slides[currentSlide].stats[0].label}
-                  </p>
+                  {/* Image de fond pour la carte */}
+                  <div className="absolute inset-0">
+                    <img
+                      src={slides[currentSlide].image}
+                      alt={slides[currentSlide].title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40" />
+                  </div>
+                  
+                  {/* Contenu de la carte */}
+                  <div className="relative z-10 p-5 min-h-[500px] flex flex-col justify-center">
+                    <motion.h1
+                      variants={itemVariants}
+                      className="text-2xl font-bold mb-3 text-white"
+                    >
+                      {slides[currentSlide].title}{' '}
+                      {slides[currentSlide].highlight && (
+                        <span className="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                          {slides[currentSlide].highlight}
+                        </span>
+                      )}
+                    </motion.h1>
+                    
+                    <motion.p
+                      variants={itemVariants}
+                      className="text-sm text-white/90 mb-5"
+                    >
+                      {slides[currentSlide].description}
+                    </motion.p>
+                    
+                    <motion.div
+                      variants={itemVariants}
+                      className="flex flex-wrap gap-2"
+                    >
+                      <Button size="sm" href={slides[currentSlide].buttonLink}>
+                        {slides[currentSlide].buttonText}
+                      </Button>
+                      <Button size="sm" variant="outline" href="/contact">
+                        {t('common.contact')}
+                      </Button>
+                    </motion.div>
+
+                    <motion.div
+                      variants={itemVariants}
+                      className="flex flex-wrap gap-3 mt-5 pt-4 border-t border-white/20"
+                    >
+                      {slides[currentSlide].stats.map((stat, idx) => (
+                        <div key={idx}>
+                          <p className="text-lg font-bold text-primary-500">{stat.value}</p>
+                          <p className="text-xs text-white/70">{stat.label}</p>
+                        </div>
+                      ))}
+                    </motion.div>
+                  </div>
                 </motion.div>
-              </motion.div>
+              )}
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Dots - Seulement les points de navigation */}
+          {/* Navigation Dots */}
           <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3 z-20">
             {slides.map((_, index) => (
               <button

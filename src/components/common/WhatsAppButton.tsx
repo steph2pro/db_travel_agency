@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -14,12 +15,11 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  // const [selectedCity, setSelectedCity] = useState('');
   const [showNotification, setShowNotification] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
-  // Détecter le défilement pour cacher/afficher le bouton
   useEffect(() => {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
@@ -35,42 +35,23 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Fonction pour déterminer la ville la plus proche (simulation basée sur le navigateur)
-  // const detectNearestCity = (): string => {
-  //   // Simuler la détection de localisation (vous pouvez améliorer avec l'API Geolocation)
-  //   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    
-  //   // Logique simple basée sur le fuseau horaire
-  //   if (timezone.includes('Douala') || timezone.includes('Duala')) return 'Douala';
-  //   if (timezone.includes('Yaounde')) return 'Yaoundé - Nkoabang';
-  //   if (timezone.includes('Bafoussam')) return 'Bafoussam - Kamkop';
-    
-  //   // Par défaut, retourner la première ville
-  //   return offices[0]?.city || '';
-  // };
-
   const getPhoneNumber = (city: string): string => {
     const office = offices.find(o => o.city === city);
     return office?.phone || offices[0]?.phone || '';
   };
 
   const handleCitySelect = (city: string) => {
-    // setSelectedCity(city);
     const phone = getPhoneNumber(city);
-    const message = encodeURIComponent(
-      "Bonjour, je souhaite obtenir plus d'informations sur vos services d'immigration. Merci !"
-    );
+    const message = encodeURIComponent(t('whatsapp.defaultMessage'));
     const whatsappUrl = `https://wa.me/${237}${phone.replace(/\s/g, '')}?text=${message}`;
     window.open(whatsappUrl, '_blank');
     setIsOpen(false);
     
-    // Afficher une notification
     setShowNotification(true);
     setTimeout(() => setShowNotification(false), 3000);
   };
 
   const handleDefaultContact = () => {
-    // Contacter l'agence principale (première dans la liste)
     const mainOffice = offices[0];
     if (mainOffice) {
       handleCitySelect(mainOffice.city);
@@ -79,7 +60,6 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
 
   return (
     <>
-      {/* Bouton flottant WhatsApp */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ 
@@ -89,7 +69,6 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
         transition={{ duration: 0.3 }}
         className="fixed bottom-6 right-6 z-50"
       >
-        {/* Menu de sélection de ville */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -101,7 +80,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
               <div className="p-4 border-b border-gray-200 dark:border-gray-700">
                 <div className="flex justify-between items-center">
                   <h3 className="font-bold text-gray-800 dark:text-white">
-                    Choisissez votre agence
+                    {t('whatsapp.chooseAgency')}
                   </h3>
                   <button
                     onClick={() => setIsOpen(false)}
@@ -111,7 +90,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
                   </button>
                 </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  Sélectionnez l'agence la plus proche de vous
+                  {t('whatsapp.selectNearestAgency')}
                 </p>
               </div>
               <div className="max-h-64 overflow-y-auto">
@@ -138,14 +117,13 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
                   onClick={handleDefaultContact}
                   className="w-full text-center text-sm text-primary-500 hover:text-primary-600 font-medium"
                 >
-                  Contacter l'agence principale
+                  {t('whatsapp.contactMainAgency')}
                 </button>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Bouton principal */}
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -157,7 +135,6 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
             <FontAwesomeIcon icon={faWhatsapp} className="w-7 h-7 text-white" />
           </div>
           
-          {/* Badge de notification */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -167,19 +144,17 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
           </motion.div>
         </motion.button>
 
-        {/* Indicateur de ville détectée */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="absolute bottom-0 right-16 mb-3 hidden md:block"
         >
           <div className="bg-white dark:bg-gray-800 rounded-full px-3 py-1 text-xs shadow-md">
-            <span className="text-gray-500 dark:text-gray-400">📍 Proche de vous</span>
+            <span className="text-gray-500 dark:text-gray-400">📍 {t('whatsapp.nearYou')}</span>
           </div>
         </motion.div>
       </motion.div>
 
-      {/* Notification de succès */}
       <AnimatePresence>
         {showNotification && (
           <motion.div
@@ -189,7 +164,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ offices }) => {
             className="fixed bottom-24 right-6 z-50 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2"
           >
             <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4" />
-            <span className="text-sm">Ouverture WhatsApp...</span>
+            <span className="text-sm">{t('whatsapp.openingWhatsApp')}</span>
           </motion.div>
         )}
       </AnimatePresence>
